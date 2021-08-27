@@ -15,7 +15,7 @@
 </div>
 
 <div align="center">
-  Parameterized tests for ava!
+  Parameterized tests for <a href="https://github.com/avajs/ava">ava</a>!
 </div>
 
 ## Install
