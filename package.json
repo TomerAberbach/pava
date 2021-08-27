@@ -7,7 +7,16 @@
     "url": "https://tomeraberba.ch"
   },
   "description": "Parameterized tests for ava!",
-  "keywords": [],
+  "keywords": [
+    "ava",
+    "test",
+    "runner",
+    "testing",
+    "parameterized",
+    "parametric",
+    "parameterize",
+    "parameterized testing"
+  ],
   "homepage": "https://github.com/TomerAberbach/pava",
   "repository": "TomerAberbach/pava",
   "bugs": {
