@@ -1,0 +1,42 @@
+{
+  "name": "pava",
+  "version": "0.0.0",
+  "author": {
+    "name": "Tomer Aberbach",
+    "email": "tomeraberbach@gmail.com",
+    "url": "https://tomeraberba.ch"
+  },
+  "description": "Parameterized tests for ava!",
+  "keywords": [],
+  "homepage": "https://github.com/TomerAberbach/pava",
+  "repository": "TomerAberbach/pava",
+  "bugs": {
+    "url": "https://github.com/TomerAberbach/pava/issues"
+  },
+  "license": "Apache-2.0",
+  "files": [
+    "src"
+  ],
+  "type": "module",
+  "engines": {
+    "node": ">= 12.17"
+  },
+  "exports": "./src/index.js",
+  "module": "./src/index.js",
+  "types": "./src/index.d.ts",
+  "scripts": {
+    "prepare": "tomer install",
+    "lint": "tomer lint",
+    "test": "tomer test"
+  },
+  "peerDependencies": {
+    "ava": ">=3.0.0"
+  },
+  "devDependencies": {
+    "ava": "3.15.0",
+    "ava-fast-check": "4.0.2",
+    "fast-check": "2.17.0",
+    "tomer": "0.0.15",
+    "tsd": "0.17.0"
+  }
+}
