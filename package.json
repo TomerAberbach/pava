@@ -35,7 +35,7 @@
   "types": "./src/index.d.ts",
   "scripts": {
     "prepare": "tomer install",
-    "lint": "tomer lint",
+    "lint": "tomer lint -g",
     "test": "tomer test"
   },
   "peerDependencies": {
