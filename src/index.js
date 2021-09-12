@@ -18,7 +18,7 @@ import { inspect } from 'util'
 
 const parameterized = (test, title, testCases, implementation) => {
   for (const [subtitle, testCase] of normalizeTestCases(testCases)) {
-    test(`${title} - ${subtitle}`, t => implementation(t, testCase))
+    test(`${title} › ${subtitle}`, t => implementation(t, testCase))
   }
 }
 
