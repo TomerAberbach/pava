@@ -29,7 +29,7 @@ $ npm i pava
 ```js
 import test from 'ava'
 import parameterized from 'pava'
-import { mySerialize, myDeserialize } from './my-code.js'
+import { mySerialize, myDeserialize, myMax } from './my-code.js'
 
 // Writing your test like this...
 parameterized(
@@ -84,6 +84,21 @@ test(`integer serializing and deserializing - 5`, t => {
 test(`integer serializing and deserializing - 100000`, t => {
   t.is(myDeserialize(mySerialize(100000)), 100000)
 })
+
+// Destructure object literals to test functions with multiple parameters!
+parameterized(
+  test,
+  `maximum of two integers`,
+  {
+    sameInteger: { first: 2, second: 2, expected: 2 },
+    twoPositive: { first: 2, second: 3, expected: 3 },
+    onePositiveOneNegative: { first: 2, second: -3, expected: 2 },
+    twoNegative: { first: -2, second: -3, expected: -2 },
+  },
+  (t, { first, second, expected }) => {
+    t.is(myMax(first, second), expected)
+  },
+)
 
 // You can also use any ava test interface!
 parameterized(test.serial /* ... */)
